@@ -1,4 +1,4 @@
-# 🧪 Projeto de Testes Automatizados - Automation Exercise
+# Projeto de Testes Automatizados - Automation Exercise
 
 Este repositório contém testes automatizados desenvolvidos com **Cypress** para o site [Automation Exercise](https://automationexercise.com/).
 O objetivo do projeto é praticar automação de testes end-to-end (E2E), testes de fluxo do usuário e testes de API, simulando cenários reais de navegação e validação.
