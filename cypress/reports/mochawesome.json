@@ -1,0 +1,397 @@
+{
+  "stats": {
+    "suites": 7,
+    "tests": 10,
+    "passes": 10,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-06-01T23:49:49.004Z",
+    "end": "2025-06-01T23:49:53.621Z",
+    "duration": 4617,
+    "testsRegistered": 10,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "136054c7-cd0c-4429-8495-20149a73f667",
+      "title": "",
+      "fullFile": "cypress\\e2e\\apiTester.cy.js",
+      "file": "cypress\\e2e\\apiTester.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "642b6400-a338-4d72-8976-478bfde691cf",
+          "title": "Tetes de Api Automation exercise",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [],
+          "suites": [
+            {
+              "uuid": "a0cad191-c806-4713-af61-be4d8cdf88cd",
+              "title": " GET All Products List",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Validar lista de produtos é rernoada com sucesso",
+                  "fullTitle": "Tetes de Api Automation exercise  GET All Products List Validar lista de produtos é rernoada com sucesso",
+                  "timedOut": null,
+                  "duration": 1235,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress\\\\e2e\\\\apiTester.cy.js\"\n}",
+                  "code": "cy.request({\n  method: \"GET\",\n  url: \"https://automationexercise.com/api/productsList\"\n}).then(response => {\n  expect(response.status).to.eq(200);\n  ///Convertento string para JSON\n  const body = JSON.parse(response.body);\n  expect(body).to.have.property(\"products\");\n  expect(body.products).to.be.an(\"array\");\n});",
+                  "err": {},
+                  "uuid": "0248629b-6f4c-4d13-b3bf-df63d789a3f5",
+                  "parentUUID": "a0cad191-c806-4713-af61-be4d8cdf88cd",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "não deve permitir POST na rota de produtos",
+                  "fullTitle": "Tetes de Api Automation exercise  GET All Products List não deve permitir POST na rota de produtos",
+                  "timedOut": null,
+                  "duration": 341,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress\\\\e2e\\\\apiTester.cy.js\"\n}",
+                  "code": "cy.request({\n  method: \"POST\",\n  url: \"https://automationexercise.com/api/productsList\",\n  failOnStatusCode: false\n}).then(response => {\n  expect(response.status).to.eq(200);\n  const body = JSON.parse(response.body);\n  expect(body.responseCode).to.eq(405);\n  expect(body.message).to.eq(\"This request method is not supported.\");\n});",
+                  "err": {},
+                  "uuid": "d7d0a26a-49d3-44bf-bade-d20e64c02f6d",
+                  "parentUUID": "a0cad191-c806-4713-af61-be4d8cdf88cd",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [
+                {
+                  "uuid": "275fef62-fab6-4c5d-b271-5f7a292805df",
+                  "title": "Testando retorno das marcas cadastradas",
+                  "fullFile": "",
+                  "file": "",
+                  "beforeHooks": [],
+                  "afterHooks": [],
+                  "tests": [
+                    {
+                      "title": "Deve Retornar todas as Marcas",
+                      "fullTitle": "Tetes de Api Automation exercise  GET All Products List Testando retorno das marcas cadastradas Deve Retornar todas as Marcas",
+                      "timedOut": null,
+                      "duration": 419,
+                      "state": "passed",
+                      "speed": "fast",
+                      "pass": true,
+                      "fail": false,
+                      "pending": false,
+                      "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress\\\\e2e\\\\apiTester.cy.js\"\n}",
+                      "code": "cy.request({\n  method: \"GET\",\n  url: \"https://automationexercise.com/api/brandsList\"\n}).then(res => {\n  expect(res.status).to.eq(200);\n  const body = JSON.parse(res.body);\n  expect(body.brands.length).to.be.greaterThan(0);\n});",
+                      "err": {},
+                      "uuid": "30a96fc5-4a2a-4531-a5c9-663a3d5d08a4",
+                      "parentUUID": "275fef62-fab6-4c5d-b271-5f7a292805df",
+                      "isHook": false,
+                      "skipped": false
+                    },
+                    {
+                      "title": "Deve retornar os produtos  Polo",
+                      "fullTitle": "Tetes de Api Automation exercise  GET All Products List Testando retorno das marcas cadastradas Deve retornar os produtos  Polo",
+                      "timedOut": null,
+                      "duration": 311,
+                      "state": "passed",
+                      "speed": "fast",
+                      "pass": true,
+                      "fail": false,
+                      "pending": false,
+                      "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress\\\\e2e\\\\apiTester.cy.js\"\n}",
+                      "code": "cy.request({\n  method: \"GET\",\n  url: \"https://automationexercise.com/api/brandsList\"\n}).then(response => {\n  expect(response.status).to.equal(200);\n  // converte string para JSON\n  const body = JSON.parse(response.body);\n  // espera que o body tenha a propiedade brands\n  expect(body).to.have.property(\"brands\");\n  // acessa a lista das marcas\n  const brands = body.brands;\n  // verifica se brands é uma lista, e se a lista não esta vazia\n  expect(brands).to.be.an(\"array\").and.not.to.be.empty;\n  // filtra as marcas que tem o nome ' Polo '\n  const poloBrands = brands.filter(brand => brand.brand === \"Polo\");\n  //verifica se ao menos 1 marca polo foi encontrada\n  expect(poloBrands.length).to.be.greaterThan(0);\n});",
+                      "err": {},
+                      "uuid": "a53dd150-1c74-4ef3-9e96-022a37237fa1",
+                      "parentUUID": "275fef62-fab6-4c5d-b271-5f7a292805df",
+                      "isHook": false,
+                      "skipped": false
+                    }
+                  ],
+                  "suites": [],
+                  "passes": [
+                    "30a96fc5-4a2a-4531-a5c9-663a3d5d08a4",
+                    "a53dd150-1c74-4ef3-9e96-022a37237fa1"
+                  ],
+                  "failures": [],
+                  "pending": [],
+                  "skipped": [],
+                  "duration": 730,
+                  "root": false,
+                  "rootEmpty": false,
+                  "_timeout": 2000
+                },
+                {
+                  "uuid": "337116df-b488-4559-8a8f-a0b59786090a",
+                  "title": "POST Search Product",
+                  "fullFile": "",
+                  "file": "",
+                  "beforeHooks": [],
+                  "afterHooks": [],
+                  "tests": [
+                    {
+                      "title": "deve retornar erro se não enviar search_product sem parametro",
+                      "fullTitle": "Tetes de Api Automation exercise  GET All Products List POST Search Product deve retornar erro se não enviar search_product sem parametro",
+                      "timedOut": null,
+                      "duration": 298,
+                      "state": "passed",
+                      "speed": "fast",
+                      "pass": true,
+                      "fail": false,
+                      "pending": false,
+                      "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress\\\\e2e\\\\apiTester.cy.js\"\n}",
+                      "code": "cy.request({\n  method: \"POST\",\n  url: \"https://automationexercise.com/api/searchProduct\",\n  headers: {\n    \"Content-Type\": \"application/x-www-form-urlencoded\"\n  },\n  body: \"\"\n}).then(res => {\n  expect(res.status).to.eq(200);\n  const json = JSON.parse(res.body);\n  expect(json.responseCode).to.eq(400);\n  expect(json.message).to.eq(\"Bad request, search_product parameter is missing in POST request.\");\n  cy.log(res.body);\n});",
+                      "err": {},
+                      "uuid": "2b32fb87-f7bc-40a1-bb38-5d8298032628",
+                      "parentUUID": "337116df-b488-4559-8a8f-a0b59786090a",
+                      "isHook": false,
+                      "skipped": false
+                    }
+                  ],
+                  "suites": [],
+                  "passes": [
+                    "2b32fb87-f7bc-40a1-bb38-5d8298032628"
+                  ],
+                  "failures": [],
+                  "pending": [],
+                  "skipped": [],
+                  "duration": 298,
+                  "root": false,
+                  "rootEmpty": false,
+                  "_timeout": 2000
+                },
+                {
+                  "uuid": "56491797-a34c-4091-87e7-c52883feb396",
+                  "title": "Requisições de Login",
+                  "fullFile": "",
+                  "file": "",
+                  "beforeHooks": [],
+                  "afterHooks": [],
+                  "tests": [
+                    {
+                      "title": "Login deve funcionar com dados validos",
+                      "fullTitle": "Tetes de Api Automation exercise  GET All Products List Requisições de Login Login deve funcionar com dados validos",
+                      "timedOut": null,
+                      "duration": 321,
+                      "state": "passed",
+                      "speed": "fast",
+                      "pass": true,
+                      "fail": false,
+                      "pending": false,
+                      "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress\\\\e2e\\\\apiTester.cy.js\"\n}",
+                      "code": "cy.request({\n  method: \"POST\",\n  url: \"https://automationexercise.com/api/verifyLogin\",\n  failOnStatusCode: false,\n  headers: {\n    \"Content-Type\": \"application/x-www-form-urlencoded\"\n  },\n  body: `email=lucashenrique@gmail.com&password=lucas123.`\n}).then(response => {\n  expect(response.status).to.eq(200);\n  const json = JSON.parse(response.body);\n  expect(json.message).to.eq(\"User exists!\");\n  cy.log(response.body);\n});",
+                      "err": {},
+                      "uuid": "ad10f6c4-1b97-4a3a-a8fe-01a41cd874df",
+                      "parentUUID": "56491797-a34c-4091-87e7-c52883feb396",
+                      "isHook": false,
+                      "skipped": false
+                    },
+                    {
+                      "title": "Login deve falhar ao logar com senha errada",
+                      "fullTitle": "Tetes de Api Automation exercise  GET All Products List Requisições de Login Login deve falhar ao logar com senha errada",
+                      "timedOut": null,
+                      "duration": 331,
+                      "state": "passed",
+                      "speed": "fast",
+                      "pass": true,
+                      "fail": false,
+                      "pending": false,
+                      "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress\\\\e2e\\\\apiTester.cy.js\"\n}",
+                      "code": "cy.request({\n  method: \"POST\",\n  url: \"https://automationexercise.com/api/verifyLogin\",\n  failOnStatusCode: false,\n  headers: {\n    \"Content-Type\": \"application/x-www-form-urlencoded\"\n  },\n  body: `email=lucassssss@gmail.com&password=senha.aaa`\n}).then(response => {\n  expect(response.status).to.eq(200);\n  const json = JSON.parse(response.body);\n  expect(json.message).to.eq(\"User not found!\");\n  cy.log(response.body);\n});",
+                      "err": {},
+                      "uuid": "fafe4938-3bda-4423-bfd0-22b3d973e6fb",
+                      "parentUUID": "56491797-a34c-4091-87e7-c52883feb396",
+                      "isHook": false,
+                      "skipped": false
+                    },
+                    {
+                      "title": "Deve Retornar detalhes da conta do usuario por e-mail",
+                      "fullTitle": "Tetes de Api Automation exercise  GET All Products List Requisições de Login Deve Retornar detalhes da conta do usuario por e-mail",
+                      "timedOut": null,
+                      "duration": 302,
+                      "state": "passed",
+                      "speed": "fast",
+                      "pass": true,
+                      "fail": false,
+                      "pending": false,
+                      "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress\\\\e2e\\\\apiTester.cy.js\"\n}",
+                      "code": "cy.request({\n  method: \"GET\",\n  url: \"https://automationexercise.com/api/getUserDetailByEmail?email=lucashenrique@gmail.com\"\n}).then(response => {\n  expect(response.status).to.eq(200);\n  expect(response.body).to.be.a(\"string\");\n});",
+                      "err": {},
+                      "uuid": "76e4f3dc-41f5-4780-85ec-8a2a5b4e53db",
+                      "parentUUID": "56491797-a34c-4091-87e7-c52883feb396",
+                      "isHook": false,
+                      "skipped": false
+                    }
+                  ],
+                  "suites": [
+                    {
+                      "uuid": "7ba3c00e-ad73-4ef5-95b7-ca22cb418b3c",
+                      "title": "Requisições de Criação de Conta",
+                      "fullFile": "",
+                      "file": "",
+                      "beforeHooks": [],
+                      "afterHooks": [],
+                      "tests": [
+                        {
+                          "title": "Deve criar uma nova conta de usuário com sucesso",
+                          "fullTitle": "Tetes de Api Automation exercise  GET All Products List Requisições de Login Requisições de Criação de Conta Deve criar uma nova conta de usuário com sucesso",
+                          "timedOut": null,
+                          "duration": 326,
+                          "state": "passed",
+                          "speed": "fast",
+                          "pass": true,
+                          "fail": false,
+                          "pending": false,
+                          "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress\\\\e2e\\\\apiTester.cy.js\"\n}",
+                          "code": "cy.request({\n  method: \"POST\",\n  url: \"https://automationexercise.com/api/createAccount\",\n  headers: {\n    \"Content-Type\": \"application/x-www-form-urlencoded\"\n  },\n  body: `name=Lucas&email=lucashenrique_teste${Date.now()}@gmail.com&password=lucas123.&title=Mr&birth_date=10&birth_month=5&birth_year=1995&firstname=Lucas&lastname=Henrique&company=MinhaEmpresa&address1=Rua+Principal&address2=Complemento+123&country=Brazil&zipcode=12345678&state=SP&city=São+Paulo&mobile_number=11999999999`,\n  failOnStatusCode: false // permite continuar mesmo com erro (útil em testes)\n}).then(response => {\n  cy.log(\"Status:\", response.status);\n  cy.log(\"Body:\", response.body);\n  expect(response.status).to.eq(200);\n  expect(response.body).to.contain(\"User created!\");\n});",
+                          "err": {},
+                          "uuid": "c362cea3-fc13-4256-a1d6-ff85823694f9",
+                          "parentUUID": "7ba3c00e-ad73-4ef5-95b7-ca22cb418b3c",
+                          "isHook": false,
+                          "skipped": false
+                        }
+                      ],
+                      "suites": [],
+                      "passes": [
+                        "c362cea3-fc13-4256-a1d6-ff85823694f9"
+                      ],
+                      "failures": [],
+                      "pending": [],
+                      "skipped": [],
+                      "duration": 326,
+                      "root": false,
+                      "rootEmpty": false,
+                      "_timeout": 2000
+                    },
+                    {
+                      "uuid": "839cd008-500a-45ad-a613-8c65935680f7",
+                      "title": "deve deletar conta do usuario",
+                      "fullFile": "",
+                      "file": "",
+                      "beforeHooks": [],
+                      "afterHooks": [],
+                      "tests": [
+                        {
+                          "title": "requisição exclusão",
+                          "fullTitle": "Tetes de Api Automation exercise  GET All Products List Requisições de Login deve deletar conta do usuario requisição exclusão",
+                          "timedOut": null,
+                          "duration": 308,
+                          "state": "passed",
+                          "speed": "fast",
+                          "pass": true,
+                          "fail": false,
+                          "pending": false,
+                          "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress\\\\e2e\\\\apiTester.cy.js\"\n}",
+                          "code": "cy.request({\n  method: \"DELETE\",\n  url: `https://automationexercise.com/api/deleteAccount?email=lucassssssssss@gmail.com&password=lucas123.`\n}).then(response => {\n  expect(response.status).to.eq(200);\n  const json = JSON.parse(response.body); // <-- Corrigido aqui\n  expect(json.message).to.eq(\"Bad request, email parameter is missing in DELETE request.\");\n});",
+                          "err": {},
+                          "uuid": "066272ea-e749-459e-8674-3ad0c25b590a",
+                          "parentUUID": "839cd008-500a-45ad-a613-8c65935680f7",
+                          "isHook": false,
+                          "skipped": false
+                        }
+                      ],
+                      "suites": [],
+                      "passes": [
+                        "066272ea-e749-459e-8674-3ad0c25b590a"
+                      ],
+                      "failures": [],
+                      "pending": [],
+                      "skipped": [],
+                      "duration": 308,
+                      "root": false,
+                      "rootEmpty": false,
+                      "_timeout": 2000
+                    }
+                  ],
+                  "passes": [
+                    "ad10f6c4-1b97-4a3a-a8fe-01a41cd874df",
+                    "fafe4938-3bda-4423-bfd0-22b3d973e6fb",
+                    "76e4f3dc-41f5-4780-85ec-8a2a5b4e53db"
+                  ],
+                  "failures": [],
+                  "pending": [],
+                  "skipped": [],
+                  "duration": 954,
+                  "root": false,
+                  "rootEmpty": false,
+                  "_timeout": 2000
+                }
+              ],
+              "passes": [
+                "0248629b-6f4c-4d13-b3bf-df63d789a3f5",
+                "d7d0a26a-49d3-44bf-bade-d20e64c02f6d"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 1576,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

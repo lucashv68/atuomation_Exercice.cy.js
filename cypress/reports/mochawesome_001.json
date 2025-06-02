@@ -1,0 +1,450 @@
+{
+  "stats": {
+    "suites": 8,
+    "tests": 10,
+    "passes": 2,
+    "pending": 0,
+    "failures": 8,
+    "start": "2025-06-01T23:50:06.294Z",
+    "end": "2025-06-01T23:52:00.781Z",
+    "duration": 114487,
+    "testsRegistered": 10,
+    "passPercent": 20,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "9e3a4b9d-69c3-4626-8547-ea59467defac",
+      "title": "",
+      "fullFile": "cypress\\e2e\\userFlow.cy.js",
+      "file": "cypress\\e2e\\userFlow.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "d085bcc7-3d81-4ca1-8095-ac591a337cf0",
+          "title": "Plano de testes Automation Exercise",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [],
+          "suites": [
+            {
+              "uuid": "d1ccefc2-d792-4105-ae4a-c916f6f7a53d",
+              "title": "Modulo 1 Cadastro e Login",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Cadastro de novo Usuario",
+                  "fullTitle": "Plano de testes Automation Exercise Modulo 1 Cadastro e Login Cadastro de novo Usuario",
+                  "timedOut": null,
+                  "duration": 14805,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": "[\n  {\n    \"title\": \"cypress-mochawesome-reporter-videos-failed\",\n    \"value\": \"cypress\\\\e2e\\\\userFlow.cy.js\"\n  },\n  {\n    \"title\": \"cypress-mochawesome-reporter-screenshots\",\n    \"value\": [\n      [\n        \"\\\\userFlow.cy.js\\\\Plano de testes Automation Exercise -- Modulo 1 Cadastro e Login -- Cadastro de novo Usuario (failed).png\"\n      ]\n    ]\n  }\n]",
+                  "code": "_homePage.default.acessarPagina();\n_loginPage.default.novoCadastro();\n_loginPage.default.formularioCadastro();\n_loginPage.default.verificaLogin();",
+                  "err": {
+                    "message": "AssertionError: Timed out retrying after 6000ms: Expected to find element: `#id_gender2`, but never found it.",
+                    "estack": "AssertionError: Timed out retrying after 6000ms: Expected to find element: `#id_gender2`, but never found it.\n    at LoginCadastro.formularioCadastro (webpack://automation-exercise/./cypress/pageObjects/loginPage.js:18:11)\n    at Context.eval (webpack://automation-exercise/./cypress/e2e/userFlow.cy.js:19:26)",
+                    "diff": null
+                  },
+                  "uuid": "1b0dd957-eb3d-442f-b709-645a0cabe5cc",
+                  "parentUUID": "d1ccefc2-d792-4105-ae4a-c916f6f7a53d",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [
+                {
+                  "uuid": "db737d79-06eb-4e58-a77d-4d70427722ec",
+                  "title": "Caso de Teste 2: Login com usuário válido e inválido",
+                  "fullFile": "",
+                  "file": "",
+                  "beforeHooks": [],
+                  "afterHooks": [],
+                  "tests": [
+                    {
+                      "title": "Login Valido",
+                      "fullTitle": "Plano de testes Automation Exercise Modulo 1 Cadastro e Login Caso de Teste 2: Login com usuário válido e inválido Login Valido",
+                      "timedOut": null,
+                      "duration": 10254,
+                      "state": "failed",
+                      "speed": null,
+                      "pass": false,
+                      "fail": true,
+                      "pending": false,
+                      "context": "[\n  {\n    \"title\": \"cypress-mochawesome-reporter-videos-failed\",\n    \"value\": \"cypress\\\\e2e\\\\userFlow.cy.js\"\n  },\n  {\n    \"title\": \"cypress-mochawesome-reporter-screenshots\",\n    \"value\": [\n      [\n        \"\\\\userFlow.cy.js\\\\Plano de testes Automation Exercise -- Modulo 1 Cadastro e Login -- Caso de Teste 2 Login com usuário válido e inválido -- Login Valido (failed).png\"\n      ]\n    ]\n  }\n]",
+                      "code": "_loginPage.default.loginValido();",
+                      "err": {
+                        "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `b`, but never found it.",
+                        "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `b`, but never found it.\n    at LoginCadastro.loginValido (webpack://automation-exercise/./cypress/pageObjects/loginPage.js:58:20)\n    at Context.eval (webpack://automation-exercise/./cypress/e2e/userFlow.cy.js:26:26)",
+                        "diff": null
+                      },
+                      "uuid": "c9f5b769-6762-4c1b-96b7-3127cf536f67",
+                      "parentUUID": "db737d79-06eb-4e58-a77d-4d70427722ec",
+                      "isHook": false,
+                      "skipped": false
+                    },
+                    {
+                      "title": "Login invalido",
+                      "fullTitle": "Plano de testes Automation Exercise Modulo 1 Cadastro e Login Caso de Teste 2: Login com usuário válido e inválido Login invalido",
+                      "timedOut": null,
+                      "duration": 5423,
+                      "state": "passed",
+                      "speed": "medium",
+                      "pass": true,
+                      "fail": false,
+                      "pending": false,
+                      "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress\\\\e2e\\\\userFlow.cy.js\"\n}",
+                      "code": "_loginPage.default.loginInvalido();",
+                      "err": {},
+                      "uuid": "09f29b75-5031-458c-897c-eb7c40b7a1b2",
+                      "parentUUID": "db737d79-06eb-4e58-a77d-4d70427722ec",
+                      "isHook": false,
+                      "skipped": false
+                    }
+                  ],
+                  "suites": [],
+                  "passes": [
+                    "09f29b75-5031-458c-897c-eb7c40b7a1b2"
+                  ],
+                  "failures": [
+                    "c9f5b769-6762-4c1b-96b7-3127cf536f67"
+                  ],
+                  "pending": [],
+                  "skipped": [],
+                  "duration": 15677,
+                  "root": false,
+                  "rootEmpty": false,
+                  "_timeout": 2000
+                },
+                {
+                  "uuid": "2ac36089-cf95-4914-8f17-ca184def406d",
+                  "title": "Caso de Teste 3: Visualizar lista de produtos",
+                  "fullFile": "",
+                  "file": "",
+                  "beforeHooks": [],
+                  "afterHooks": [],
+                  "tests": [
+                    {
+                      "title": "Clicar em produtos após Login",
+                      "fullTitle": "Plano de testes Automation Exercise Modulo 1 Cadastro e Login Caso de Teste 3: Visualizar lista de produtos Clicar em produtos após Login",
+                      "timedOut": null,
+                      "duration": 9188,
+                      "state": "failed",
+                      "speed": null,
+                      "pass": false,
+                      "fail": true,
+                      "pending": false,
+                      "context": "[\n  {\n    \"title\": \"cypress-mochawesome-reporter-videos-failed\",\n    \"value\": \"cypress\\\\e2e\\\\userFlow.cy.js\"\n  },\n  {\n    \"title\": \"cypress-mochawesome-reporter-screenshots\",\n    \"value\": [\n      [\n        \"\\\\userFlow.cy.js\\\\Plano de testes Automation Exercise -- Modulo 1 Cadastro e Login -- Caso de Teste 3 Visualizar lista de produtos -- Clicar em produtos após Login (failed).png\"\n      ]\n    ]\n  }\n]",
+                      "code": "_loginPage.default.loginValido();\n_PoductsPage.default.clicarProduto();",
+                      "err": {
+                        "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `b`, but never found it.",
+                        "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `b`, but never found it.\n    at LoginCadastro.loginValido (webpack://automation-exercise/./cypress/pageObjects/loginPage.js:58:20)\n    at Context.eval (webpack://automation-exercise/./cypress/e2e/userFlow.cy.js:36:26)",
+                        "diff": null
+                      },
+                      "uuid": "9263665b-e966-43cf-952c-1efbd852661d",
+                      "parentUUID": "2ac36089-cf95-4914-8f17-ca184def406d",
+                      "isHook": false,
+                      "skipped": false
+                    },
+                    {
+                      "title": "Verificar se todos os Produtos foram carregados",
+                      "fullTitle": "Plano de testes Automation Exercise Modulo 1 Cadastro e Login Caso de Teste 3: Visualizar lista de produtos Verificar se todos os Produtos foram carregados",
+                      "timedOut": null,
+                      "duration": 12523,
+                      "state": "failed",
+                      "speed": null,
+                      "pass": false,
+                      "fail": true,
+                      "pending": false,
+                      "context": "[\n  {\n    \"title\": \"cypress-mochawesome-reporter-videos-failed\",\n    \"value\": \"cypress\\\\e2e\\\\userFlow.cy.js\"\n  },\n  {\n    \"title\": \"cypress-mochawesome-reporter-screenshots\",\n    \"value\": [\n      [\n        \"\\\\userFlow.cy.js\\\\Plano de testes Automation Exercise -- Modulo 1 Cadastro e Login -- Caso de Teste 3 Visualizar lista de produtos -- Verificar se todos os Produtos foram carregados (failed).png\"\n      ]\n    ]\n  }\n]",
+                      "code": "_loginPage.default.loginValido();\n_PoductsPage.default.clicarProduto();\n_PoductsPage.default.verificarProdutos();",
+                      "err": {
+                        "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `b`, but never found it.",
+                        "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `b`, but never found it.\n    at LoginCadastro.loginValido (webpack://automation-exercise/./cypress/pageObjects/loginPage.js:58:20)\n    at Context.eval (webpack://automation-exercise/./cypress/e2e/userFlow.cy.js:41:26)",
+                        "diff": null
+                      },
+                      "uuid": "1ea884b0-086a-4272-b6f7-210d5a07cbdc",
+                      "parentUUID": "2ac36089-cf95-4914-8f17-ca184def406d",
+                      "isHook": false,
+                      "skipped": false
+                    },
+                    {
+                      "title": "Busca Por nome - Produto Certo",
+                      "fullTitle": "Plano de testes Automation Exercise Modulo 1 Cadastro e Login Caso de Teste 3: Visualizar lista de produtos Busca Por nome - Produto Certo",
+                      "timedOut": null,
+                      "duration": 11723,
+                      "state": "failed",
+                      "speed": null,
+                      "pass": false,
+                      "fail": true,
+                      "pending": false,
+                      "context": "[\n  {\n    \"title\": \"cypress-mochawesome-reporter-videos-failed\",\n    \"value\": \"cypress\\\\e2e\\\\userFlow.cy.js\"\n  },\n  {\n    \"title\": \"cypress-mochawesome-reporter-screenshots\",\n    \"value\": [\n      [\n        \"\\\\userFlow.cy.js\\\\Plano de testes Automation Exercise -- Modulo 1 Cadastro e Login -- Caso de Teste 3 Visualizar lista de produtos -- Busca Por nome - Produto Certo (failed).png\"\n      ]\n    ]\n  }\n]",
+                      "code": "_loginPage.default.loginValido();\n_PoductsPage.default.clicarProduto();\n_PoductsPage.default.buscaPorNome();",
+                      "err": {
+                        "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `b`, but never found it.",
+                        "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `b`, but never found it.\n    at LoginCadastro.loginValido (webpack://automation-exercise/./cypress/pageObjects/loginPage.js:58:20)\n    at Context.eval (webpack://automation-exercise/./cypress/e2e/userFlow.cy.js:47:26)",
+                        "diff": null
+                      },
+                      "uuid": "9c9ab8c4-0a32-491a-983e-43bc090a82fc",
+                      "parentUUID": "2ac36089-cf95-4914-8f17-ca184def406d",
+                      "isHook": false,
+                      "skipped": false
+                    }
+                  ],
+                  "suites": [
+                    {
+                      "uuid": "163c8f9d-babb-4d5b-bd76-7c53db482d18",
+                      "title": "Caso de Teste 4: ",
+                      "fullFile": "",
+                      "file": "",
+                      "beforeHooks": [],
+                      "afterHooks": [],
+                      "tests": [
+                        {
+                          "title": "Adicionar múltiplos produtos ao carrinho",
+                          "fullTitle": "Plano de testes Automation Exercise Modulo 1 Cadastro e Login Caso de Teste 3: Visualizar lista de produtos Caso de Teste 4:  Adicionar múltiplos produtos ao carrinho",
+                          "timedOut": null,
+                          "duration": 11010,
+                          "state": "failed",
+                          "speed": null,
+                          "pass": false,
+                          "fail": true,
+                          "pending": false,
+                          "context": "[\n  {\n    \"title\": \"cypress-mochawesome-reporter-videos-failed\",\n    \"value\": \"cypress\\\\e2e\\\\userFlow.cy.js\"\n  },\n  {\n    \"title\": \"cypress-mochawesome-reporter-screenshots\",\n    \"value\": [\n      [\n        \"\\\\userFlow.cy.js\\\\Plano de testes Automation Exercise -- Modulo 1 Cadastro e Login -- Caso de Teste 3 Visualizar lista de produtos -- Caso de Teste 4 -- Adicionar múltiplos produtos ao carrinho (failed).png\"\n      ]\n    ]\n  }\n]",
+                          "code": "_loginPage.default.loginValido();\n_PoductsPage.default.clicarProduto();\n_PoductsPage.default.multiplosProdutos();",
+                          "err": {
+                            "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `b`, but never found it.",
+                            "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `b`, but never found it.\n    at LoginCadastro.loginValido (webpack://automation-exercise/./cypress/pageObjects/loginPage.js:58:20)\n    at Context.eval (webpack://automation-exercise/./cypress/e2e/userFlow.cy.js:54:26)",
+                            "diff": null
+                          },
+                          "uuid": "2b435f58-ec90-4208-aa75-de42c2d5fac2",
+                          "parentUUID": "163c8f9d-babb-4d5b-bd76-7c53db482d18",
+                          "isHook": false,
+                          "skipped": false
+                        }
+                      ],
+                      "suites": [],
+                      "passes": [],
+                      "failures": [
+                        "2b435f58-ec90-4208-aa75-de42c2d5fac2"
+                      ],
+                      "pending": [],
+                      "skipped": [],
+                      "duration": 11010,
+                      "root": false,
+                      "rootEmpty": false,
+                      "_timeout": 2000
+                    },
+                    {
+                      "uuid": "277a91e8-4d75-4cac-a4c0-b1e90bcea902",
+                      "title": "Caso de teste 5 : ",
+                      "fullFile": "",
+                      "file": "",
+                      "beforeHooks": [],
+                      "afterHooks": [],
+                      "tests": [
+                        {
+                          "title": "Checkout completo",
+                          "fullTitle": "Plano de testes Automation Exercise Modulo 1 Cadastro e Login Caso de Teste 3: Visualizar lista de produtos Caso de teste 5 :  Checkout completo",
+                          "timedOut": null,
+                          "duration": 12130,
+                          "state": "failed",
+                          "speed": null,
+                          "pass": false,
+                          "fail": true,
+                          "pending": false,
+                          "context": "[\n  {\n    \"title\": \"cypress-mochawesome-reporter-videos-failed\",\n    \"value\": \"cypress\\\\e2e\\\\userFlow.cy.js\"\n  },\n  {\n    \"title\": \"cypress-mochawesome-reporter-screenshots\",\n    \"value\": [\n      [\n        \"\\\\userFlow.cy.js\\\\Plano de testes Automation Exercise -- Modulo 1 Cadastro e Login -- Caso de Teste 3 Visualizar lista de produtos -- Caso de teste 5 -- Checkout completo (failed).png\"\n      ]\n    ]\n  }\n]",
+                          "code": "_loginPage.default.loginValido();\n_cartPage.default.checkCart();",
+                          "err": {
+                            "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `b`, but never found it.",
+                            "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `b`, but never found it.\n    at LoginCadastro.loginValido (webpack://automation-exercise/./cypress/pageObjects/loginPage.js:58:20)\n    at Context.eval (webpack://automation-exercise/./cypress/e2e/userFlow.cy.js:62:30)",
+                            "diff": null
+                          },
+                          "uuid": "8e16f190-dc60-4cb8-a824-035be1c7ebd9",
+                          "parentUUID": "277a91e8-4d75-4cac-a4c0-b1e90bcea902",
+                          "isHook": false,
+                          "skipped": false
+                        }
+                      ],
+                      "suites": [],
+                      "passes": [],
+                      "failures": [
+                        "8e16f190-dc60-4cb8-a824-035be1c7ebd9"
+                      ],
+                      "pending": [],
+                      "skipped": [],
+                      "duration": 12130,
+                      "root": false,
+                      "rootEmpty": false,
+                      "_timeout": 2000
+                    },
+                    {
+                      "uuid": "2c97d4ef-9a57-4c23-b741-f680b1f2957d",
+                      "title": "Caso de Teste 6: ",
+                      "fullFile": "",
+                      "file": "",
+                      "beforeHooks": [],
+                      "afterHooks": [],
+                      "tests": [
+                        {
+                          "title": "Enviar mensagem de contato",
+                          "fullTitle": "Plano de testes Automation Exercise Modulo 1 Cadastro e Login Caso de Teste 3: Visualizar lista de produtos Caso de Teste 6:  Enviar mensagem de contato",
+                          "timedOut": null,
+                          "duration": 11930,
+                          "state": "passed",
+                          "speed": "slow",
+                          "pass": true,
+                          "fail": false,
+                          "pending": false,
+                          "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress\\\\e2e\\\\userFlow.cy.js\"\n}",
+                          "code": "_contatctPage.default.clicarContateNos();\n_contatctPage.default.prencherCampos();\n_contatctPage.default.importarArquivo();\n_contatctPage.default.enviarMensagem();",
+                          "err": {},
+                          "uuid": "2c6d33e7-f359-4d36-8104-aad812387c03",
+                          "parentUUID": "2c97d4ef-9a57-4c23-b741-f680b1f2957d",
+                          "isHook": false,
+                          "skipped": false
+                        }
+                      ],
+                      "suites": [],
+                      "passes": [
+                        "2c6d33e7-f359-4d36-8104-aad812387c03"
+                      ],
+                      "failures": [],
+                      "pending": [],
+                      "skipped": [],
+                      "duration": 11930,
+                      "root": false,
+                      "rootEmpty": false,
+                      "_timeout": 2000
+                    },
+                    {
+                      "uuid": "09fedbe3-aa85-4149-b387-9332bea75576",
+                      "title": "Caso de Teste 7: ",
+                      "fullFile": "",
+                      "file": "",
+                      "beforeHooks": [],
+                      "afterHooks": [],
+                      "tests": [
+                        {
+                          "title": "Logout e exclusão da conta",
+                          "fullTitle": "Plano de testes Automation Exercise Modulo 1 Cadastro e Login Caso de Teste 3: Visualizar lista de produtos Caso de Teste 7:  Logout e exclusão da conta",
+                          "timedOut": null,
+                          "duration": 14271,
+                          "state": "failed",
+                          "speed": null,
+                          "pass": false,
+                          "fail": true,
+                          "pending": false,
+                          "context": "[\n  {\n    \"title\": \"cypress-mochawesome-reporter-videos-failed\",\n    \"value\": \"cypress\\\\e2e\\\\userFlow.cy.js\"\n  },\n  {\n    \"title\": \"cypress-mochawesome-reporter-screenshots\",\n    \"value\": [\n      [\n        \"\\\\userFlow.cy.js\\\\Plano de testes Automation Exercise -- Modulo 1 Cadastro e Login -- Caso de Teste 3 Visualizar lista de produtos -- Caso de Teste 7 -- Logout e exclusão da conta (failed).png\"\n      ]\n    ]\n  }\n]",
+                          "code": "_loginPage.default.loginValido();\n_signUpPage.default.logout();\n_loginPage.default.loginValido();\n_signUpPage.default.excluirConta();",
+                          "err": {
+                            "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `b`, but never found it.",
+                            "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `b`, but never found it.\n    at LoginCadastro.loginValido (webpack://automation-exercise/./cypress/pageObjects/loginPage.js:58:20)\n    at Context.eval (webpack://automation-exercise/./cypress/e2e/userFlow.cy.js:79:30)",
+                            "diff": null
+                          },
+                          "uuid": "982032dc-2b86-4088-8098-5b152373c1e7",
+                          "parentUUID": "09fedbe3-aa85-4149-b387-9332bea75576",
+                          "isHook": false,
+                          "skipped": false
+                        }
+                      ],
+                      "suites": [],
+                      "passes": [],
+                      "failures": [
+                        "982032dc-2b86-4088-8098-5b152373c1e7"
+                      ],
+                      "pending": [],
+                      "skipped": [],
+                      "duration": 14271,
+                      "root": false,
+                      "rootEmpty": false,
+                      "_timeout": 2000
+                    }
+                  ],
+                  "passes": [],
+                  "failures": [
+                    "9263665b-e966-43cf-952c-1efbd852661d",
+                    "1ea884b0-086a-4272-b6f7-210d5a07cbdc",
+                    "9c9ab8c4-0a32-491a-983e-43bc090a82fc"
+                  ],
+                  "pending": [],
+                  "skipped": [],
+                  "duration": 33434,
+                  "root": false,
+                  "rootEmpty": false,
+                  "_timeout": 2000
+                }
+              ],
+              "passes": [],
+              "failures": [
+                "1b0dd957-eb3d-442f-b709-645a0cabe5cc"
+              ],
+              "pending": [],
+              "skipped": [],
+              "duration": 14805,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
